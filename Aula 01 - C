@@ -1,0 +1,39 @@
+#include<stdio.h>
+
+int main () {
+// Declarando variaveis 	
+	char nome[200];//Aceita caracteres e letras
+	char sexo;
+	int idade;
+	float peso;
+	
+//Informações a serem executadas pelo usuário 	
+	printf("Digite o seu nome: ");
+	scanf("%s",&nome);		
+	fflush(stdin);
+	
+	printf("Digite o sexo - (F) ou (M): ");
+	scanf("%c",&sexo);		
+	fflush(stdin);
+	
+	printf("Digite sua idade: ");
+	scanf("%i",&idade);	
+	fflush(stdin);
+		
+	printf("Digite seu peso: ");
+	scanf("%f",&peso);		
+	fflush(stdin);
+
+// Limpa o terminal, retirando as perguntas da tela do usuário	
+	system("cls"); 
+	
+//Infomrações a seresem executadas
+	printf("\n<---Exibindo resultados--->\n");
+	printf("Nome:%s\n",nome);
+	printf("Sexo:%c\n",sexo);
+	printf("Idade:%i\n",idade);
+	printf("Peso:%f\n",peso);
+	
+	return 0;
+	
+}
