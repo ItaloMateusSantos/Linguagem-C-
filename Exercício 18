@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main (){
+	setlocale(LC_ALL, "");
+	float nota01, nota02, media;
+
+	do
+	{
+		system("cls");
+		printf("Digite sua nota01: ");
+		scanf("%f",&nota01);	
+	}while(nota01 <0 || nota01 >10);
+
+	do
+	{
+		system("cls");
+		printf("Digite sua nota02: ");
+		scanf("%f",&nota02);
+	}while(nota02 <0 || nota02 >10);
+
+	media = (nota01 + nota02) / 2;
+	printf("Sua média é: %f \n ", media);
+	
+	
+return 0;	
+}
