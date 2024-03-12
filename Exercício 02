@@ -1,0 +1,54 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<locale.h>
+
+void cabecalho(){
+	
+	printf("\n==SENAI===\n");
+	system("cls||clear");
+	fflush(stdin);
+}
+
+int main(){
+	setlocale(LC_ALL,"portuguese");
+// Declarando variáveis do programa
+	char nome[200];
+	int idade;
+	float nota01,nota02,nota03,media;
+	
+// Solicitando dados do usuário
+	cabecalho();
+	printf("\nDigite seu nome:");
+	scanf("%,&nome");	
+	cabecalho();
+	printf("\nDigite sua nota01:");
+	scanf("%i",nota01);
+	cabecalho();
+	printf("\nDigite sua nota02:");
+	scanf("%i",nota02);
+	printf("\nDigite sua nota03:");
+	scanf("%i",nota03);
+	
+// Calculando as notas e médias dos alunos
+	cabecalho();
+	media=(nota01+nota02+nota03)/3;
+	
+// Exibindo dados para o ususário final
+	cabecalho();
+	printf("\n===Exibindo dados ao usuario===\n");
+	printf("Nome:%\n\n",nome);
+	printf("Idade:%i\n\n",idade);
+	printf("Nota01:%i\n\n",nota01);
+	printf("Nota02:%i\n\n",nota02);
+	printf("Nota03:%i\n\n",nota03);
+	printf("Media:%i\n\n",media);
+	
+	cabecalho();
+	if(media>=7){
+		printf("Situacao:Aprovado(a)");	
+	}else{
+		printf("Situacao:Reprovado(a)");
+	}
+		
+	return 0;
+}
